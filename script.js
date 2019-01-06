@@ -1,7 +1,30 @@
-$(document).ready(function(){
-  
-  var mousePos = {};
 
+$(document).ready(function(){
+  /*$(".container").hover(function(){
+	  console.log("in");
+      var range = 15;
+      var image = document.getElementsByClassName("image");
+	  console.log(image);
+      var color = "background: rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+");";
+      
+      var sizeInt = getRandomInt(10, 30);
+      size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
+      
+      var left = "left: " + getRandomInt(image.left -range-sizeInt, image.left+range) + "px;";
+      
+      var top = "top: " + getRandomInt(image.top-range-sizeInt, image.top+range) + "px;"; 
+
+      var style = left+top+color+size;
+      $("<div class='ball' style='" + style + "'></div>").appendTo('.image').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();});
+	 
+   });
+ */
+	
+	
+	
+	
+  var mousePos = {};
+ 
  function getRandomInt(min, max) {
    return Math.round(Math.random() * (max - min + 1)) + min;
  }
@@ -18,7 +41,7 @@ $(document).ready(function(){
   
   var draw = setInterval(function(){
     if(mousePos.x > 0 && mousePos.y > 0){
-	  console.log("x and y:" + mousePos.x + " " + mousePos.y);
+	  
       var range = 15;
       
       var color = "background: rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+");";
