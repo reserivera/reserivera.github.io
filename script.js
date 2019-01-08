@@ -19,10 +19,58 @@ $(document).ready(function(){
 	 
    });
  */
+ var swoop = d3.select(".swoop"),
+    arrow = d3.select(".arrow"),
+    path = swoop.node(),
+    totalLength = path.getTotalLength();
+
+draw(true);
+
+function draw(immediate) {
+
+  var t = d3.transition()
+      .duration(4000)
+      .delay(immediate ? 0 : 1000)
+      .on("start",function(){
+        d3.selectAll("path").style("display", "block");
+      })
+      .on("end",draw);
+
+  arrow.transition(t)
+    .attrTween("transform",function(){
+      return function(t){
+        var pos = t * totalLength;
+        return "translate(" + pointAtLength(pos) + ") rotate( " + angleAtLength(pos) + ")";
+      };
+    });
+
+  swoop.transition(t)
+    .attrTween("stroke-dasharray",function(){
+      return d3.interpolateString("0," + totalLength,totalLength + "," + totalLength);
+    });
+
+}
+
+
+function pointAtLength(l) {
+
+  var xy = path.getPointAtLength(l);
+  return [xy.x, xy.y];
+
+}
+
+// Approximate tangent
+function angleAtLength(l) {
+
+  var a = pointAtLength(Math.max(l - 0.01,0)), // this could be slightly negative
+      b = pointAtLength(l + 0.01); // browsers cap at total length
+
+  return Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
+
+}	
 	
 	
-	
-	
+/*	
   var mousePos = {};
  
  function getRandomInt(min, max) {
@@ -46,7 +94,7 @@ $(document).ready(function(){
       
       var color = "background: rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+");";
       
-      var sizeInt = getRandomInt(10, 30);
+      var sizeInt = getRandomInt(5, 10);
       size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
       
       var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
@@ -57,4 +105,5 @@ $(document).ready(function(){
       $("<div class='ball' style='" + style + "'></div>").appendTo('main').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();}); 
     }
   }, 1);
+*/
 });

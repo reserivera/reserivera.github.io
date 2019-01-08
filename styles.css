@@ -30,36 +30,34 @@ img{
   margin-left: -50px;
 }
 
+path {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+  display: none;
+}
+
+.arrow {
+  fill: black;
+  stroke: none;
+}
+
 #spms{
   width: 40em;
   height: 20em;
 }
-/*
-#movingthing{
-  padding-left: 10px;
-  padding-bottom: 30px;
-  width: 3em;
-  height: 1em;
-  background-color: #162A42;
-  animation-duration: 2s;
-  animation-name: slidein;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  z-index: 3;
-}
-*/
 
 #movingthing{
   padding-left: 0;
-  padding-bottom: 10em;
-  width: 3em;
+  padding-bottom: 0;
+  width: 5em;
   height: 1em;
   background-color: #ffffff;
   animation-duration: 2s;
   animation-name: slidein;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  grid-column: 9/10;
+  grid-column: 9/11;
   grid-row: 2/3;
 
 }
@@ -150,11 +148,23 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
 }
 */
 @supports (display: grid) {
+  svg{
+	grid-column: 9/10;
+	grid-row: 2/4;
+	z-index: 4;
+  }
 	
   #intro{
-	grid-column: 9/10;
+	grid-column: 10/11;
 	grid-row: 2/3;
-	font-size: .75em;
+	font-size: .85em;
+	padding-left: .5vw;
+	padding-top:9vh;
+	display: block;
+	animation-duration: 2s;
+    animation-name: slidein;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
 	
   #portfolio{
@@ -306,7 +316,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         padding: 0;
         
         display: grid;
-        grid-template-columns: 4vw 25vw 4vw 16vw minmax(2em, 2vw) 6vw 3vw 20vw 14vw 7vw 5vw;
+        grid-template-columns: 4vw 25vw 4vw 16vw minmax(2em, 2vw) 6vw 3vw 15vw 14vw 7vw 5vw;
         /*grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);*/
         /*will grow no more than 28em*/
         /*once the view port hits a certain size, the font should be kept a certain size*/
@@ -382,11 +392,6 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
 		color: white;
     } 
     
-    #movingthing{
-        /*grid-column: -4 / -3;
-        grid-row: -7 / -6;*/      
-    }
-      
     .circular{
       /*visibility: hidden;*/
       margin: 0;
@@ -463,11 +468,6 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;*/
 		color: white;
-    }
-      
-    #movingthing{
-        /*grid-column: -4 / -3;
-        grid-row: -7 / -6; */     
     }
       
     .circular{
