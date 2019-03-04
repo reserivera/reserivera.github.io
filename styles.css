@@ -223,6 +223,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
 	 grid-column: 2/3;
 	 grid-row: 1/-1;
 	 background-image: url(./spms2.png);
+     filter: brightness(50%);
 	 -webkit-transition: opacity 1s ease-in-out;
   	 -moz-transition: opacity 1s ease-in-out;
      -o-transition: opacity 1s ease-in-out;
@@ -316,7 +317,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         padding: 0;
         
         display: grid;
-        grid-template-columns: 4vw 25vw 4vw 16vw minmax(2em, 2vw) 6vw 3vw 15vw 14vw 7vw 5vw;
+        grid-template-columns: 4vw minmax(5em, 25vw) 4vw minmax(7em, 10vw) minmax(2em, 2vw) fit-content(6vw) fit-content(3vw) fit-content(15vw) minmax(5em,14vw) fit-content(6vw) fit-content(5vw);
         /*grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);*/
         /*will grow no more than 28em*/
         /*once the view port hits a certain size, the font should be kept a certain size*/
@@ -333,8 +334,8 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;*/
     }
-    
-  @media (min-width: 740px) and (max-width: 870px) and (min-height: 12em) {
+   
+  /*@media (min-width: 740px) and (max-width: 870px) and (min-height: 12em) { */
     
     #firstname{
         visibility: visible;
@@ -367,8 +368,9 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
     }  
       
     #ceo{
+        visibility: visible;
         color: white;
-        grid-column: 8 / 8;
+        grid-column: 6 / 8;
         grid-row:  7 / 9;
         z-index: 2;
     } 
@@ -411,7 +413,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
       grid-row: 2 / 7;
     }
      
-  }
+  /*}*/
 
   @media (min-width: 870px) and (min-height: 27em) {
   
@@ -446,7 +448,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
       
     #ceo{
     
-        grid-column: 7 / 9;
+        grid-column: 6 / 9;
         grid-row:  7 / 9;
         z-index: 2;
     } 

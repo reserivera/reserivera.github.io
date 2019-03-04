@@ -15,8 +15,31 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script>
 	
+
+    // http://www.dte.web.id/2013/02/event-mouse-wheel.html
+
+    (function() {
+        function scrollHorizontally(e) {
+            e = window.event || e;
+            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+            document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
+            document.body.scrollLeft -= (delta*40); // Multiplied by 40
+            e.preventDefault();
+        }
+        if (window.addEventListener) {
+            // IE9, Chrome, Safari, Opera
+            window.addEventListener("mousewheel", scrollHorizontally, false);
+            // Firefox
+            window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+        } else {
+            // IE 6/7/8
+            window.attachEvent("onmousewheel", scrollHorizontally);
+        }
+    })();
+
+
   
-</script>
+  </script>
 </head>
 
 <body>
@@ -31,7 +54,7 @@
             <h1 id="lastname"> Rivera</h1>   
        
       <h4 id="ceo">CEO of viaLikha, Business Analyst Intern at FFUFM</h4>
-      <!--<div id="movingthing"><p id="arrow" style="color: white;">Portfolio</p></div>-->
+      <!--<div id="movingthing"><p id="arrow" style="color: white;">Portfolio</p></div>
 	  <p id="intro">scroll</p>
 	  <div id="movingthing">
 	  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="500">
@@ -40,24 +63,27 @@
 			c-16.6,6.1-25.2,26.6-14.8,41.8c10.9,16.1,31,17.1,48,21.7c55,14.6,112,3.9,125.4-7.2"/>
 		  <path class="arrow" d="M-5,0 L-15,15 L15,0 L-15,-15 Z"/>
 	  </svg>  
-      </div>
+      </div>-->
 
 	  <section id="portfolio">
 		  <div id="spms-backdrop">
 		  <h1 class="text lighten">SPMS</h1>
 		  </div>
-		  <p class="description">A web application for Kumon Camiling Center <br>
-		  for aiding in student performance management.</p>
-		  <div class="container" id="spms-container">
-		  
-			<!--<img class="image" id="spms" src="./spms2.png">-->
-			
-		  </div>
+		  <p class="description">A web application
+		  that aids in student performance management.</p>
+		  <a>
+              <div class="container" id="spms-container">
+		      </div>
+          </a>
 		  <div class="container" id="transpo-container">
 		  	<!--<img id="spms" src="./spms.png">-->
 		  </div>
 
 	  </section>
+      
+      <section id="portfolio__spms">
+          <p>blah blah lbah</p>
+      </section>
 	  
   
 	  
