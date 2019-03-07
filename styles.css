@@ -535,7 +535,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
     #spms-screen{
     margin-bottom: 3vh;
     height: auto;
-    width: 40em;
+    width: 30em;
     grid-column: 2/4;
 	grid-row: 2/4;
     visibility: visible;
