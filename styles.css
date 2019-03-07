@@ -405,6 +405,16 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
   }
 }
 
+    /* #firstname{
+        margin-top: 40vh;
+        display: block;
+    }
+    
+    #lastname{
+        margin-top: 60vh;
+        display: block;
+    }*/
+    
 .svg-wrapper:hover .shape {
   -webkit-animation: 0.5s draw linear forwards;
   animation: 0.5s draw linear forwards;
@@ -438,7 +448,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         writing-mode: vertical-rl;*/
     }
    
-  /*@media (min-width: 740px) and (max-width: 870px) and (min-height: 12em) { */
+ /* @media (min-width: 740px) and (max-width: 870px) and (min-height: 12em) { */
     
     #firstname{
         visibility: visible;
