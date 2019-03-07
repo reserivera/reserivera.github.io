@@ -175,7 +175,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         padding: 0;
         
         display: grid;
-        grid-template-columns: fit-content(5vw) fit-content(10vw) 0vw 10vw 25vw 5vw;
+        grid-template-columns: fit-content(5vw) fit-content(10vw) 0vw 10vw fit-content(25vw) 5vw;
         
         grid-template-rows: fit-content(2vh) fit-content(20vh) fit-content(25vh) fit-content(10vh) fit-content(10vh) fit-content(15vh) fit-content(15vh);	
 	    text-align: center;
@@ -184,7 +184,9 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
  .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-     
+  border-radius: .5%;
+  padding: 3vh;
+  margin-top: 6vh;   
   transition: 0.3s;
   grid-row: 6/7;
 }
@@ -195,10 +197,14 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
 }   
     
   #spms-card{
-      border-radius: .5%;
-      padding: 3vh;
-      margin-top: 6vh;
+      
       grid-column: 2/3;
+      grid-row: 5/7;
+  }
+    
+  #transpo-card{
+      
+      grid-column: 5/6;
       grid-row: 5/7;
   }
 /*
@@ -249,7 +255,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
     grid-column: 2/4;
 	grid-row: 2/4;
   }
-    
+  /*  
   #spms-container{
 	 grid-column: 2/3;
 	 grid-row: 4/-1;
@@ -262,12 +268,12 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
 	 opacity: 0;
   }
 
-/*need to make it a better fade out tho huhubells*/
+
   #spms-container:hover{
 	 
 	 opacity: 1;
   }
-
+*/
   #transpo-container{
 	 grid-column: 3/4;
 	 grid-row: 1/-1;
@@ -335,6 +341,19 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
     grid-column: 2/3;
 	grid-row: 4/5;
 }
+    
+  #transpo-backdrop {
+	background: url(./Prototype4.png), -webkit-linear-gradient(top, orange, pink, #6dd5ed);
+	background: url(./Prototype4.png), -moz-linear-gradient(top, orange, pink, #6dd5ed);
+	background: url(./Prototype4.png), -o-linear-gradient(top, orange, pink, #6dd5ed);
+	background: url(./Prototype4.png), linear-gradient(top, orange, pink, #6dd5ed);
+    background-size: contain;
+	background-blend-mode: overlay;  
+    margin: auto;
+    grid-column: 5/6;
+	grid-row: 4/5;
+}
+    
   .description{
     grid-column: 2/3;
 	grid-row: 6/6;
