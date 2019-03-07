@@ -253,9 +253,10 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
   #spms-screen{
     margin-bottom: 3vh;
     height: auto;
-    width: 40em;
+    width: 5em;
     grid-column: 2/4;
 	grid-row: 2/4;
+    visibility: hidden;
   }
   /*  
   #spms-container{
@@ -452,6 +453,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
     
     #firstname{
         visibility: visible;
+        color: white;
         grid-column: 3 / 6;
         grid-row: 3 / 9;
         z-index: 2;  
@@ -528,8 +530,17 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
      
   /*}*/
 
-  @media (min-width: 870px) and (min-height: 27em) {
+  @media (min-width: 870px) and (min-height: 50em) {
   
+    #spms-screen{
+    margin-bottom: 3vh;
+    height: auto;
+    width: 40em;
+    grid-column: 2/4;
+	grid-row: 2/4;
+    visibility: visible;
+    }
+      
     #firstname{
         visibility: visible;
         color: white;
