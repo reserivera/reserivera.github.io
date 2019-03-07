@@ -186,6 +186,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: .5%;
   padding: 3vh;
+  padding-bottom: 1vh;
   margin-top: 6vh;   
   transition: 0.3s;
   grid-row: 6/7;
@@ -229,6 +230,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
      grid-template-rows: 2vh 20vh 25vh 10vh 10vh 15vh 15vh;	
   }
   */
+
  .ball {
   pointer-events: none;
   position: absolute; 
@@ -359,6 +361,56 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
 	grid-row: 6/6;
   }
 	
+/* SVG stuff */
+    
+.svg-wrapper {
+  height: 60px;
+    margin: 0 auto;
+    
+  margin-top: 7vh;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #19f6e8;
+}
+
+.texthover {
+  color: black;
+  font-size: .75em;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+    
+    
   main {
         /*
         background: url(./pattern-stripes.png);
