@@ -3,6 +3,22 @@
     src: url("./mplus-2-thin-sub.woff") format('woff');
 }
 
+#menubar{
+  position: fixed;
+  grid-column: 1/-1;
+  grid-row: 1/1;
+  /*background-color: #bfac4c;*/
+  background-color: #19f6e8;
+  width: 40em;
+  height: 3em;
+  z-index: 7;
+  justify-self: center;
+  margin-top: 2vh;
+  text-align: center;
+  justify-items: center;
+}
+
+
 body {
   font-family: "Prata","Amatic SC", Helvetica, Arial, sans-serif;
   color: #282828;
@@ -169,7 +185,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
   }
 	
   #portfolio{
-	  grid-column: -2/-1;	
+	  grid-column: -2/-1;
 	  /*reset*/
         max-width: none;
         padding: 0;
@@ -177,7 +193,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         display: grid;
         grid-template-columns: fit-content(5vw) fit-content(10vw) 0vw 10vw fit-content(25vw) 5vw;
         
-        grid-template-rows: fit-content(2vh) fit-content(20vh) fit-content(25vh) fit-content(10vh) fit-content(10vh) fit-content(15vh) fit-content(15vh);	
+        grid-template-rows: minmax(2vh, 10vh) fit-content(20vh) fit-content(25vh) fit-content(10vh) fit-content(10vh) fit-content(15vh) fit-content(15vh);	
 	    text-align: center;
 	}
     
@@ -187,7 +203,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
   border-radius: .5%;
   padding: 3vh;
   padding-bottom: 1vh;
-  margin-top: 6vh;   
+  margin-top: 8vh;   
   transition: 0.3s;
   grid-row: 6/7;
 }
@@ -381,6 +397,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
   stroke-dasharray: 140 540;
   stroke-dashoffset: -474;
   stroke-width: 8px;
+  /*stroke: #892621;*/
   stroke: #19f6e8;
 }
 
@@ -422,6 +439,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
 }
     
     
+    
   main {
         /*
         background: url(./pattern-stripes.png);
@@ -436,7 +454,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
         /*will grow no more than 28em*/
         /*once the view port hits a certain size, the font should be kept a certain size*/
         /*vh makes it kasya on the screen, relative to the height of wthe browser*/
-        grid-template-rows: 6vh 25vh minmax(5em, 10vh) 4vh 4vh minmax(4em, 8vh) minmax(5em, 6vh) 10vh 13vh;
+        grid-template-rows: minmax(2vh, 10vh) 25vh minmax(5em, 10vh) 4vh 4vh minmax(4em, 8vh) minmax(5em, 6vh) 10vh 13vh;
     }
 
 	h1{
@@ -535,7 +553,7 @@ background-image: linear-gradient(top, #2193b0, #6dd5ed);
     #spms-screen{
     margin-bottom: 3vh;
     height: auto;
-    width: 30em;
+    width: 40em;
     grid-column: 2/4;
 	grid-row: 2/4;
     visibility: visible;
