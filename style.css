@@ -229,6 +229,7 @@ html {
     /* background: rgb(207, 197, 140); */
     grid-area: uxservices;
     text-align: center;
+    background: url(images/yellow-shapes.svg);
   }
 
   #contact {
