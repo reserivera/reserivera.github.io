@@ -1,129 +1,180 @@
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sophia Rivera</title>
-  <meta name="description" content="Portfolio of works. Uses grid, media queries, and writing-mode">
-  <meta name="author" content="Sophia Therese Rivera">
+        <title>We are viaLikha.</title>
+        <meta name="description" content="viaLikha's official website - v1">
+        <meta name="author" content="Sophia Therese Rivera">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Prata|Amatic+SC" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet"> 
 
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Prata|Amatic+SC" rel="stylesheet"> 
-<link rel="stylesheet" type="text/css" href="circlemenu.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="script.js"></script>
-  <script src="snap.svg-min.js"></script>
-  <script>
-	
-
-    // http://www.dte.web.id/2013/02/event-mouse-wheel.html
-
-    (function() {
-        function scrollHorizontally(e) {
-            e = window.event || e;
-            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
-            document.body.scrollLeft -= (delta*40); // Multiplied by 40
-            e.preventDefault();
-        }
-        if (window.addEventListener) {
-            // IE9, Chrome, Safari, Opera
-            window.addEventListener("mousewheel", scrollHorizontally, false);
-            // Firefox
-            window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-        } else {
-            // IE 6/7/8
-            window.attachEvent("onmousewheel", scrollHorizontally);
-        }
-    })();
-
-      
+        <!-- <script src="script.js"></script>  -->
+    </head> 
     
-  </script>
-
-</head>
-
-<body>
+    <body>
     
-  <main>
-    <div id="menubar"> <a href="#design">Design Process</a>  <a href="#portfolio">Projects</a>  <a href="#case">Case Studies</a> <a href="#contact">Contact</a></div>
-      
-      
-        <div class="circular"> 
-          <img class="imgnogrid" src="./cover.jpg">
+        <!-- TODO: create grid for streams design -->
+        <div id="title">
+            <a href='#dev-services' class='menu-item'>Services</a>
+            <a href='#contact'><button class="navi" id="contact-us">Contact Us</button></a>
+          </div>
+    
+          <div id="home">
+            
+            <!-- <div class="illus">
+                <img src="images/str-1.png" style="width:10em" alt="">
+
+            </div> -->
+
+            <div id="home-content">
+                <h1>Hi! We are viaLikha.</h1>
+                <div class="board_text">
+                  <p>Want to know how we can help? 😊</p>
+                </div>
+
+                <div>
+                    <p>Scroll Down</p>
+                    <br>
+                    <a href='#speech'>
+                        <img src="images/arrow down.svg" alt=" " style="animation: scroll-move 5s infinite; animation-timing-function: ease;">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- <div class="illus">
+                <img src="images/ran-2.png" style="width:10em" alt="">
+
+            </div> -->
+                
         </div>
         
-            <h1 id="firstname"> Sophia</h1> 
-            <h1 id="lastname"> Rivera</h1>   
-       
-      <h4 id="ceo">CEO of viaLikha, Business Analyst Intern at FFUFM</h4>
-      <!--<div id="movingthing"><p id="arrow" style="color: white;">Portfolio</p></div>
-	  <p id="intro">scroll</p>
-	  <div id="movingthing">
-	  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="500">
-		  <path class="swoop" d="M18.2,29.9,24,40.2c17.2,37.4,55.8,58.7,97,54.6
-			c13.1-1.3,28.6-6.8,38.9-15c9.4-7.5,15.6-20.4,11.6-31.7c-2.8-7.8-9.8-13.5-17.4-16.9c-9.7-4.4-21.1-5.7-31.2-2
-			c-16.6,6.1-25.2,26.6-14.8,41.8c10.9,16.1,31,17.1,48,21.7c55,14.6,112,3.9,125.4-7.2"/>
-		  <path class="arrow" d="M-5,0 L-15,15 L15,0 L-15,-15 Z"/>
-	  </svg>  
-      </div>-->
-      
-	  <section id="portfolio">
-          
-          
-          <div class="card" id="spms-card">
-          <img src="SPMS%20screen.jpg" id="spms-screen">
-		  <!--<div id="spms-backdrop">-->
-		  <h2 class="text lighten" style="color: #3b5998">SPMS</h2>
-		  <!-- </div> -->
-		  <p class="description">A web application
-		  that aids in student performance management.</p>
-              
-          <div class="svg-wrapper">
-          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-            <rect class="shape" height="60" width="320" />
-          </svg>
-           <div class="texthover">READ MORE</div>
-          </div>
-              
-          </div>
-          
-          <div class="card" id="transpo-card">
-          <img src="Prototype4.png" id="spms-screen">
-		  <!--<div id="transpo-backdrop">-->
-		  <h2 class="text lighten" style="color: #d11d53 ">Plexus</h2>
-		  <!--</div>-->
-		  <p class="description">A web application
-		  that aids in transport desirability assessment.</p>
-              
-          <div class="svg-wrapper">
-          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-            <rect class="shape" height="60" width="320" />
-          </svg>
-           <div class="texthover">READ MORE</div>
-          </div>
-              
-          </div>
-          
-          
-          <!--
-              <div class="container" id="spms-container">
-                  
-		      </div>
-          
-		  <div class="container" id="transpo-container">
-		  	<img id="spms" src="./spms.png">
-		  </div>-->
+        <div id="flex-container">
+        
+          <section id='speech'>
 
-	  </section>
-      
-     
-  
-	  
-  </main>
+            <h2>Ever had these thoughts?</h2>
+            <p>Running a business is hard, and we understand that.</p>
+
+            <div id='bubbles'>
+                <div class="speech-bubble" id="bubble-top">
+                    <img src="images/topwtext.svg" alt=" ">
+                    <!-- <p>Wah! I didn't track my transactions properly</p> -->
+                </div>
+                <div class="speech-bubble" id="bubble-middle">
+                    <img src="images/midwtext.svg" alt=" ">
+                    <!-- It takes so loooong to get all of this done -->
+                </div>
+                <div class="speech-bubble" id="bubble-bottom">
+                    <img src="images/botwtext.svg" alt=" ">
+                    <!-- I wish I could make things more efficient -->
+                </div> 
+            </div>
+            
+            
+
+          </section>
+          
+        <section id='dev-services'>
+            <!-- TODO: add tape shapes + photos in circle mask -->
+            <h2>Here's how we can help you</h2>
+            
+            <!-- <img src="images/ulefttape.svg" alt=" " id='website-tape'>  -->
+            <div class="card" id="website-dev">
+                <p class="card-title"><b>Website Development</b></p>
+                <br>
+                <p class="card-desc">Immerse customers in your products & services so they can make their choice.</p>
+            </div>
+            <img src="images/webapp.svg" alt=" " id='website-img' class='desktop-img'> 
+
+            <img src="images/ulefttape.svg" alt=" " id='webapp-tape' class='desktop-img'>
+            <div class="card" id="webapp-dev">
+                
+                <p class="card-title"><b>Web App Development</b></p>
+                <br>
+                <p class="card-desc">Increase efficiency by automating your workflow so you can spend more time with your customers.</p>
+            </div>
+            <img src="images/webapp.svg" alt=" " id='webapp-img' class='desktop-img'> 
+
+            <div class="card" id="mobileapp-dev">
+                <p class="card-title"><b>Mobile App Development</b></p>
+                <br>
+                <p class="card-desc">Increase customer engagement in an innovative way. Make it easier to keep your audience loyal to your brand.</p>
+            </div>       
+            <img src="images/mobileapp.svg" alt=" " id='mobileapp-img' class='desktop-img'>     
+          </section>
+
+        <!-- TODO: make the grid for ux services screen -->
+        <section id='ux-services'>
+            <!-- TODO: add shapes + photos-->
+            <div id="ux-title">
+                <h2>But this is what makes us different...</h2>
+                <p>You and your customers' <b>experience</b> using the solution matters to us.</p>    
+            </div>
+            <!-- TODO: create card outline -->
+
+            <div class="card" id="user-research">
+                <p class="card-title"><b>User Research</b></p>
+                <br>
+                <p class="card-desc">
+                    Get to know your users’ needs and motivations. This leads to a solution that perfectly fits them.</p>
+            </div>
+            <img src="images/sketches.svg" alt=" " id='uresearch-img' class='desktop-img'> 
+            <div class="card" id="ux-design">
+                <p class="card-title"><b>UX Design</b></p>
+                <br>
+                <p class="card-desc">
+                    Plan features and overall user journey to make the solution useful and easier to use.
+                </p>
+            </div>
+            <img src="images/sketches.svg" alt=" " id='uxdesign-img' class='desktop-img'>
+            <div class="card" id="prototyping">
+                <p class="card-title"><b>Prototyping</b></p>
+                <br>
+                <p class="card-desc">
+                    Test the solution’s flow, assess if it fits your needs, and improve based on feedback through a prototype (without code). 
+                </p>
+            </div>    
+            <img src="images/sketches.svg" alt=" " id='prototyping-img' class='desktop-img'>
+            <div class="card" id="usability-testing">
+                <p class="card-title"><b>Usability Testing</b></p>
+                <br>
+                <p class="card-desc">
+                    Involve real-world customers to test the solution and give feedback on how to make the solution better.
+                </p>
+            </div>        
+            <img src="images/sketches.svg" alt=" " id='utesting-img' class='desktop-img'>
+          </section>
+
+          
+        </div>
+
+          <!-- TODO: make the grid for the contact us screen -->
+          <section id='contact'>
+            <!-- TODO: dark blue bg, white text, yellow button -->
+            <h2 id="letstalk">Let's talk!</h2>
+            <form action="/action_page.php">
+
+                <div id='fields'>
+                    <label for="name">Your Name </label>
+                    <input type="text" id="name" name="name">
     
-
-</body>
-
+                    <label for="email">Your Email </label>
+                    <input type="text" id="email" name="email"><br>
+                    
+                    <label for="company">Your Company (if applicable) </label>
+                    <input type="text" id="company" name="company"><br>
+                    
+                    <label for="elab">Could you tell us a bit about the problem/project? </label>
+                    <textarea name="elab" cols="30" rows="5"></textarea> 
+                </div>
+                
+                <input type="submit" value="Submit" id='form-button'>
+              </form>           
+          </section>    
+    </body>
 </html>
