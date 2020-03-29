@@ -134,10 +134,6 @@ html {
     display: inline-block;
   }
 
-  .card > p{
-    top: 10em;
-  }
-
   .navi{
     border-radius: 30px;
     margin: 1em;
